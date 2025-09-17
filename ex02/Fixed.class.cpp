@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:21:18 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/17 14:16:18 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/17 16:10:37 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,69 @@ Fixed::Fixed(Fixed const& other)
 	// this->_fixedPoint = other.getRawBits();
 	*this = other;
 
+}
+
+bool	Fixed::operator>(Fixed const & first) const
+{
+	return (this->getRawBits() > first.getRawBits());
+}
+
+bool	Fixed::operator<(Fixed const & first) const
+{
+	return (this->getRawBits() < first.getRawBits());
+}
+
+bool	Fixed::operator<=(Fixed const & first) const
+{
+	return (this->getRawBits() <= first.getRawBits());
+}
+
+bool	Fixed::operator>=(Fixed const & first) const
+{
+	return (this->getRawBits() >= first.getRawBits());
+}
+
+bool	Fixed::operator==(Fixed const & first) const
+{
+	return (this->getRawBits() == first.getRawBits());
+}
+
+bool	Fixed::operator!=(Fixed const & first) const
+{
+	return (this->getRawBits() != first.getRawBits());
+}
+
+Fixed	Fixed::operator+(Fixed const & other) const
+{
+	return (this->toFloat() + other.toFloat());
+}
+
+Fixed	Fixed::operator-(Fixed const & other) const
+{
+	return (this->toFloat() - other.toFloat());
+}
+
+Fixed	Fixed::operator*(Fixed const & other) const
+{
+	return (this->toFloat() * other.toFloat());
+}
+
+Fixed	Fixed::operator/(Fixed const & other) const
+{
+	return (this->toFloat() / other.toFloat());
+}
+
+Fixed &	Fixed::operator++(void)
+{
+	this->_fixedPoint++;
+	return (*this);
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	this->_fixedPoint++;
+	return (tmp);
 }
 
 Fixed &	Fixed::operator=(Fixed const & other)

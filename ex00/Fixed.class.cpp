@@ -6,11 +6,13 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:21:18 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/11 17:18:42 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/17 10:42:36 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.class.hpp"
+
+int const	Fixed::_fractionnalBits = 8;
 
 Fixed::Fixed() : _fixedPoint(0)
 {

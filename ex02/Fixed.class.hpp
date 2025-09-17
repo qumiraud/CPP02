@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:21:11 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/17 14:13:57 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/17 16:10:43 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,25 @@ class Fixed
 		~Fixed();								//destructor			|
 
 		Fixed&	operator=(Fixed const & other);	//attribution operand	|---->cannoncical form
+
+		Fixed	operator+(Fixed const & toAdd) const;
+		Fixed	operator-(Fixed const & toLess) const;
+		Fixed	operator*(Fixed const & toMultiply) const;
+		Fixed	operator/(Fixed const & toDivide) const;
+
+		Fixed&	operator++(void);
+		Fixed	operator++(int);
+
+
+
 		bool	operator>(Fixed const & first) const;
+		bool	operator<(Fixed const & first) const;
+		bool	operator>=(Fixed const & first) const;
+		bool	operator<=(Fixed const & first) const;
+		bool	operator==(Fixed const & first) const;
+		bool	operator!=(Fixed const & first) const;
+
+
 
 		int		getRawBits(void)const;
 		void	setRawBits(int const raw);
