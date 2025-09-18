@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:21:18 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/18 14:08:31 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/18 14:43:48 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ Fixed::Fixed(float floating)
 Fixed::Fixed(Fixed const& other)
 {
 	// std::cout << "Copy constructor called" << std::endl;
-	// this->_fixedPoint = other.getRawBits();
 	*this = other;
 
 }

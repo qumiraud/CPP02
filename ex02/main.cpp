@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:20:59 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/17 16:03:42 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/18 14:15:36 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ int main( void )
 {
 	Fixed z;
 	Fixed a(9.4f);
-	Fixed b(3.75f);
+	Fixed b(1);
 	Fixed c(4.7f);
 	Fixed d(4.7f);
 	Fixed e(5);
-	// Fixed const f( Fixed( 5.05f ) * Fixed( 2 ) );
+	Fixed const f(a);
+	Fixed const g(b);
+	Fixed const h( Fixed( 5.05f ) * Fixed( 2 ) );
 	if (a > b)
 		std::cout << "a bigger than b" << std::endl;
 	if (b < a)
@@ -44,13 +46,25 @@ int main( void )
 
 	std::cout << std::endl << std::endl << std::endl;
 
-	std::cout << z << std::endl;
-	std::cout << ++z << std::endl;
-	std::cout << z << std::endl;
-	std::cout << z++ << std::endl;
-	std::cout << z << std::endl;
-	// std::cout << b << std::endl;
-	// std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << "z : " << z << std::endl;
+	std::cout << "pre-inc :" << ++z << std::endl;
+	std::cout << "z : " << z << std::endl;
+	std::cout << "post-inc: " << z++ << std::endl;
+	std::cout << "z : " << z << std::endl;
+	std::cout << "pre-decr : " << --z << std::endl;
+	std::cout << "z : " << z << std::endl;
+	std::cout << "post-decr : " << z-- << std::endl;
+	std::cout << "z : " << z << std::endl;
+
+	std::cout << std::endl << std::endl << std::endl;
+
+
+	std::cout << h << std::endl;
+	std::cout << "max between a and h : " << Fixed::max( a, h ) << std::endl;
+	std::cout << "min between a and h : " << Fixed::min( a, h ) << std::endl;
+	std::cout << "max between f and g : " << Fixed::max( f, g ) << std::endl;
+	std::cout << "min between f and g : " << Fixed::min( f, g ) << std::endl;
+
 
 	return (0);
 }
