@@ -6,14 +6,14 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:19:03 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/18 15:07:49 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/29 13:39:38 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef POINT_CLASS_HPP
 # define POINT_CLASS_HPP
 # include <iostream>
-# include <stdlib.h>
+# include <cstdlib>
 # include "Fixed.class.hpp"
 
 class Point
